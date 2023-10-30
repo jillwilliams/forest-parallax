@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forest Parallax</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rancho&family=Caveat&family=Creepster&family=Quintessential&family=Rye&family=UnifrakturMaguntia&family=Kranky&family=Nosifer&family=Noto+Sans+Rubic&family=Noto+Color+Emoji&family=Dancing+Script&family=Fuggles&family=Indie+Flower&family=Kalam&family=Montserrat:wght@100&family=Permanent+Marker&family=Poppins&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!-- keep this -->
+        <script src="https://kit.fontawesome.com/9f71dab2a2.js" crossorigin="anonymous"></script>
+        <!-- keep this -->
+        <link rel="stylesheet" href="./styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Forest</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>It's Time For A New</span><br>Adventure</h2>
+            <img src="images/bird1.png" id="bird1">
+            <img src="images/bird2.png" id="bird2">
+            <img src="images/forest.png" id="forest">
+            <a href="#" id="btn">Explore</a>
+            <img src="images/rocks.png" id="rocks">
+            <img src="images/water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2>Parallax Scrolling Effect</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at vitae distinctio dolore nesciunt asperiores eos amet maxime magni ducimus explicabo officiis harum ut, dignissimos ipsa laborum, voluptatum incidunt pariatur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam dolore exercitationem tempore! Neque incidunt facilis obcaecati architecto mollitia blanditiis soluta corrupti. Doloribus inventore illum a quod facere architecto corrupti aspernatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolores, corrupti pariatur, ipsa tempora assumenda impedit excepturi quasi in optio aliquam unde. Enim iste cum dolor vitae laboriosam vel sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, officia iusto. Expedita, quibusdam nemo ratione quae reprehenderit repudiandae molestiae quisquam fugit cum similique rem numquam veniam eligendi et praesentium officia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, porro consequuntur quidem deleniti sit, reprehenderit nihil sed accusamus voluptate assumenda quibusdam enim aliquid dolorem ex omnis cum ratione sequi explicabo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae molestias eum consequatur, quibusdam, aperiam velit officiis a nesciunt quaerat nisi iure suscipit tempore minima ipsam. Dicta accusamus ab similique ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates dolore, perferendis ipsum perspiciatis beatae a inventore vel quia culpa optio aliquid, dicta in vitae iure molestiae amet. Voluptatum, aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde quod ad eius soluta nam, pariatur hic laborum nisi aliquid natus earum repellendus voluptatem explicabo officia magni culpa porro. Repellendus, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et a sit, similique aspernatur dolorem odio illum. Cumque dolorum reiciendis perspiciatis laboriosam ipsa ratione nulla dolorem maxime recusandae. Repellat, ut.</p>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
